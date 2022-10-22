@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>HTML Academy: каталог - Глейси</title>
     <meta charset="utf-8">
+    <title>HTML Academy: каталог - Глейси</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
 
-    <!-- Заголовок страницы -->
+    <!-- Шапка страницы -->
     <header class="page-header">
       <nav class="navigation">
         <a class="logo-link" href="index.html">
           <img class="logo-image" src="images/logo.svg" width="137" height="56" alt="Логотип магазина мороженого Глейси.">
         </a>
+        <!-- Основная навигация (текстовые кнопки) -->
         <ul class="navigation-list">
-          <li class="navigation-item dropdown">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Каталог</a>
+          <li class="navigation-item">
+            <a class="button-text button-text--dropdown" href="catalog.html">Каталог</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Доставка и оплата</a>
+            <a class="button-text" href="#">Доставка и оплата</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">О компании</a>
+            <a class="button-text" href="#">О компании</a>
           </li>
         </ul>
+        <!-- Пользовательская навигация (текст с иконкой) -->
         <ul class="navigation-controls-list">
           <li class="navigation-controls-item">
-            <button class="button button-search" type="button">
+            <button class="button-text-icon button--search" type="button">
               <span class="visually-hidden">Поиск</span>
             </button>
           </li>
           <li class="navigation-controls-item">
-            <a class="button button-sign-in" href="#">Вход</a>
+            <a class="button-text-icon button--sign-in" href="#">Вход</a>
           </li>
           <li class="navigation-controls-item">
-            <a class="button button-cart" href="#"><span class="cart-number">2</span> товара</a>
+            <a class="button-text-icon button--cart" href="#"><span class="cart-number">2</span> товара</a>
           </li>
         </ul>
       </nav>
@@ -54,7 +57,7 @@
             <a class="breadcrumbs-link breadcrumbs-link--current">Сливочное мороженое</a>
           </li>
         </ul>
-        <h1 class="catalog-title">Сливочное мороженое</h1>
+        <h1 class="catalog-title title_2">Сливочное мороженое</h1>
       </header>
 
       <section class="catalog-products">
@@ -63,14 +66,14 @@
         <!-- ** Блок фильтра товаров ** -->
         <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
           <!-- Сортировка товаров -->
-          <label>
-            Сортировка:
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Сортировка:</legend>
             <select class="control-select">
               <option value="popular">По популярности</option>
               <option value="cheap">Сначала дешевые</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-          </label>
+          </fieldset>
           <!-- фильтр по цене -->
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Цена: 100 ₽ – 500 ₽</legend>
@@ -142,7 +145,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="button button-filter-apply" type="submit">Применить</button>
+          <button class="button-filter-apply" type="submit">Применить</button>
         </form>
 
         <!-- Карточки товаров -->
@@ -154,7 +157,7 @@
               <p class="product-desc">Сливочное мороженое с малиновым джемом</p>
             </a>
             <b class="product-price">310 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -165,7 +168,7 @@
               <p class="product-desc">Фисташковый пломбир с кусочками шоколада</p>
             </a>
             <b class="product-price">340 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -176,7 +179,7 @@
               <p class="product-desc">Крем-брюле с черничным джемом</p>
             </a>
             <b class="product-price">330 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -187,7 +190,7 @@
               <p class="product-desc">Ванильный пломбир со сладкой посыпкой</p>
             </a>
             <b class="product-price">320 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -198,7 +201,7 @@
               <p class="product-desc">Сливочное мороженое с ежевичным джемом</p>
             </a>
             <b class="product-price">330 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -209,7 +212,7 @@
               <p class="product-desc">Сливочный пломбир с банановым вкусом</p>
             </a>
             <b class="product-price">340 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -220,7 +223,7 @@
               <p class="product-desc">Классический шоколадный пломбир</p>
             </a>
             <b class="product-price">270 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -231,7 +234,7 @@
               <p class="product-desc">Сливочный пломбир с клубничным вкусом</p>
             </a>
             <b class="product-price">300 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -242,7 +245,7 @@
               <p class="product-desc">Освежающий лимонный сорбет</p>
             </a>
             <b class="product-price">310 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -253,7 +256,7 @@
               <p class="product-desc">Сливочный пломбир с ментоловым сиропом</p>
             </a>
             <b class="product-price">320 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -264,7 +267,7 @@
               <p class="product-desc">Фисташковый пломбир с шоколадным сиропом</p>
             </a>
             <b class="product-price">360 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
@@ -275,17 +278,17 @@
               <p class="product-desc">Классическое крем-брюле</p>
             </a>
             <b class="product-price">280 ₽/кг</b>
-            <button class="button button-add-to-cart" type="button">
+            <button class="button-cart" type="button">
               <span class="visually-hidden">Добавить в корзину</span>
             </button>
           </li>
         </ul>
-        <button class="button products-show-more">Показать еще</button>
+        <button class="button-common products-show-more">Показать еще</button>
 
         <!-- Пагинация товаров -->
-        <ol class="products-pagination">
+        <ol class="products-pagination-list">
           <li class="pagination-item">
-            <a class="pagination-link pagination-link--previous pagination-link--disabled">
+            <a class="pagination-link pagination-link--prev pagination-link--disabled">
               <span class="visually-hidden">Предыдущая страница</span>
             </a>
           </li>
@@ -319,17 +322,17 @@
       <div class="footer-socials">
         <ul class="footer-socials-list">
           <li class="footer-socials-item">
-            <a class="footer-socials-link" href="https://t.me/htmlacademy" target="_blank">
+            <a class="socials-link" href="https://t.me/htmlacademy" target="_blank">
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-socials-item">
-            <a class="footer-socials-link" href="https://vk.com/htmlacademy" target="_blank">
+            <a class="socials-link" href="https://vk.com/htmlacademy" target="_blank">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="footer-socials-item">
-            <a class="footer-socials-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <a class="socials-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
