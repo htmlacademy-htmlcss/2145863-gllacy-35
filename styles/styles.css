@@ -122,6 +122,16 @@ body {
   line-height: 20px;
 }
 
+/*********** Типовые стили ***********/
+
+/* Стиль - Заголовок 2 */
+.title_2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+}
+
 /*********** Шапка ***********/
 
 .page-header {
@@ -164,14 +174,6 @@ body {
   list-style: none;
 }
 
-/* Промо блок */
-.promo-title {
-  font-size: 32px;
-  line-height: 46px;
-  font-weight: 900;
-  text-align: center;
-}
-
 .promo-list {
   list-style: none;
 }
@@ -184,14 +186,6 @@ body {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-}
-
-/* Каточки товаров и блок популярных товаров*/
-.popular-title {
-  font-size: 32px;
-  line-height: 46px;
-  font-weight: 900;
-  text-align: center;
 }
 
 .popular-list {
@@ -222,13 +216,6 @@ body {
 /* Блок с преимуществами */
 .advantages {
   background-color: #FFFFFF;
-}
-
-.advantages-title {
-  font-size: 32px;
-  line-height: 46px;
-  font-weight: 900;
-  text-align: center;
 }
 
 .advantages-list {
@@ -272,13 +259,6 @@ body {
 /* Блок доставки */
 .delivery {
   background-color: #F5F5F5;
-}
-
-.delivery-title {
-  font-size: 32px;
-  line-height: 46px;
-  font-weight: 900;
-  text-align: center;
 }
 
 .delivery-form {
@@ -353,10 +333,31 @@ body {
 }
 
 /*********** Каталог  ***********/
+
+/* Хлебные крошки */
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* фильтр */
 .catalog-filter-list {
   list-style: none;
 }
 
+.control-select {
+  font-family: "Inter", sans-serif;
+  line-height: 20px;
+}
+
+/* список товаров */
 .product-list {
   list-style: none;
 }
