@@ -22,7 +22,6 @@
   font-display: swap;
 }
 
-
 html {
   /* Sticky footer */
   height: 100%;
@@ -155,6 +154,7 @@ body {
 .catalog-filter {
   font-size: 14px;
   line-height: 20px;
+  width: 823px;
 }
 
 /*********** Типовые стили ***********/
@@ -182,17 +182,6 @@ body {
 .product-list,
 .products-pagination-list {
   list-style-type: none;
-}
-
-.navigation-list,
-.navigation-controls-list,
-.slider-list,
-.slider-pagination,
-.slider-socials,
-.promo-list,
-.popular-list,
-.footer-socials-list,
-.footer-menu-list {
   margin: 0;
   padding: 0;
 }
@@ -467,11 +456,16 @@ body {
   line-height: 20px;
   font-weight: 700;
   list-style-type: none;
+  padding: 0;
 }
 
 .breadcrumbs-link {
   text-decoration: none;
   color: inherit;
+}
+
+.catalog-title {
+  text-align: left;
 }
 
 /* фильтр */
@@ -500,4 +494,22 @@ body {
 .product-price {
   font-size: 20px;
   font-weight: 700;
+}
+
+.container-products-bottom {
+  display: flex;
+  padding-left: 397px;
+}
+
+.wrapper-show-more {
+  flex-grow: 1;
+}
+
+.products-pagination-list {
+  width: 397px;
+}
+
+.products-show-more {
+  margin: 0 auto;
+  display: block;
 }
