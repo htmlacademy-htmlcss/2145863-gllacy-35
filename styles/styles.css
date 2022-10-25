@@ -30,6 +30,7 @@ html {
 body {
   min-width: 1366px;
   margin: 0;
+  padding-top: 24px;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -72,6 +73,7 @@ body {
   font-family: "Inter", sans-serif;
   text-align: center;
   text-decoration: none;
+  padding: 8px 16px;
 }
 
 /* кнопка меню (текст с иконкой) */
@@ -81,7 +83,19 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   text-align: center;
+  padding: 8px 16px;
+  margin-left: 16px;
   text-decoration: none;
+  height: 32px;
+  border-radius: 16px;
+}
+
+/* Кнопка поиска */
+.button--search {
+  width: 32px;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
 /* Основная кнопка */
@@ -205,10 +219,15 @@ body {
 
 .logo-link {
   margin-right: 16px;
+  /* устраняет разницу в высоте изображения и ссылки-обертки */
+  height: 56px;
 }
 
 .navigation-list {
   width: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .page-header-tel {
@@ -216,10 +235,15 @@ body {
   margin-right: 16px;
   font-weight: 700;
   text-decoration: none;
+  align-self: center;
+  padding-left: 16px;
 }
 
 .navigation-controls-list {
-  min-width: 267px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
 }
 
 /*********** Главный блок ***********/
