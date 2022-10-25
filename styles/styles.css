@@ -69,6 +69,7 @@ body {
 /* кнопка меню (текст) */
 .button-text {
   color: inherit;
+  font-family: "Inter", sans-serif;
   text-align: center;
   text-decoration: none;
 }
@@ -77,6 +78,7 @@ body {
 .button-text-icon {
   color: inherit;
   background-color: rgba(252, 252, 252, 0.3);
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   text-align: center;
   text-decoration: none;
@@ -123,7 +125,7 @@ body {
 .button-filter-apply {
   color: #2D3440;
   background-color: rgba(252, 252, 252, 0.3);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   line-height: 20px;
 }
 
@@ -290,6 +292,7 @@ body {
 
 .popular-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
