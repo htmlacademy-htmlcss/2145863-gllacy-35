@@ -425,12 +425,23 @@ img {
 .wrapper-columns {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 
 /* Вставка со статьей из блога */
-.new-article {
+.new-article,
+.subscribe {
+  box-sizing: border-box;
   background-color: #FFFFFF;
   width: 570px;
+  border-radius: 16px;
+  min-height: 224px;
+}
+
+.new-article {
+  background: url("../images/new-article-background.jpg") no-repeat;
+  background-color: #FFFFFF;
+  padding: 32px;
 }
 
 .new-article-title {
@@ -438,24 +449,53 @@ img {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .new-article-link {
+  display: inline-block;
   color: inherit;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   text-decoration: none;
+  width: 303px;
 }
 
 /* Блок подписки на рассылку */
 .subscribe {
+  background: repeating-linear-gradient(-45deg , #69A9FF 0px, #69A9FF 8px, #EDF1F5 8px, #EDF1F5 24px, #FF2F64 24px, #FF2F64 32px, #EDF1F5 32px, #EDF1F5 48px);
   background-color: #FFFFFF;
   width: 570px;
+  border-radius: 16px;
+  padding: 6px;
+  display: flex;
 }
 
+.container-subscribe {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.subscribe form {
+  display: flex;
+}
+
+.subscribe .form-input {
+  flex-grow: 1;
+  margin-right: 14px;
+  height: 48px;
+  padding-left: 14px;
+}
 .subscribe-text {
   line-height: 22px;
+  margin-top: 0;
+  margin-bottom: auto;
+  flex-grow: 1;
 }
 
 /* Блок доставки */
