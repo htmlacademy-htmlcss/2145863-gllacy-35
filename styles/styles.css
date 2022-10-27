@@ -119,7 +119,6 @@ img {
   border: 4px solid #F9CBD8;
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
-
 }
 
 /* Дополнительная кнопка */
@@ -134,12 +133,28 @@ img {
 }
 
 .button-slider-pagination {
-  /* TODO */
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #FCFCFC;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  opacity: 0.3;
 }
+
+.button-slider-pagination-current {
+  opacity: 1;
+}
+
 
 /* Кнопка социальных сетей */
 .socials-link {
-  /* TODO */
+  display: block;
+  background-color: #FCFCFC;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 }
 
 /* Кнопка корзины */
@@ -158,6 +173,10 @@ img {
   background-color: rgba(252, 252, 252, 0.3);
   font-family: "Inter", sans-serif;
   line-height: 20px;
+}
+
+.slider-pagination-item {
+  margin-right: 8px;
 }
 
 /* Основная кнопка пагинации каталога*/
@@ -310,10 +329,18 @@ img {
 .slider-pagination {
   min-width: 52px;
   display: flex;
+  flex-wrap: wrap;
 }
+
 .slider-socials {
-  min-width: 104px;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.slider-socials-item {
+  margin-left: 16px;
+}
+
 
 /* Промо блок */
 
@@ -495,35 +522,47 @@ img {
   line-height: 22px;
   margin-top: 0;
   margin-bottom: auto;
+  padding-bottom: 18px;
   flex-grow: 1;
 }
 
 /* Блок доставки */
 .delivery {
-  background-color: #F5F5F5;
+  box-sizing: border-box;
+  background: #F5F5F5 url("../images/delivery-background.jpg");
   display: flex;
-  padding-left: 100px;
+  min-height: 534px;
+  border-radius: 16px;
+  padding: 64px;
+  margin-bottom: 80px;
 }
 
 .delivery-title {
   text-align: left;
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
 .wrapper-delivery {
-  /* box-sizing: border-box; */
   width: 371px;
   margin-right: auto;
+  padding: 103px 135px 36px 36px;
 }
 
 .delivery-form {
+  box-sizing: border-box;
   background-color: #FCFCFC;
+  border-radius: 8px;
+  box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
   width: 500px;
-  margin-right: 64px;
+  padding: 40px;
 }
 
 .delivery-form-text {
   color: #565C66;
   line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .delivery-text {
@@ -531,22 +570,39 @@ img {
   line-height: 22px;
 }
 
+.wrapper-button {
+  text-align: center;
+}
+
 /* Блок контакты */
 
 .contacts {
-  background-color: #F5F5F5;
-  padding-left: 64px;
+  box-sizing: border-box;
+  background: #F5F5F5 url("../images/contacts-background.jpg") -18px -88px;
+  background-size: auto 135%;
+  padding: 64px;
+  min-height: 492px;
+  border-radius: 16px;
 }
 
 .contacts-address {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   background-color: #FCFCFC;
   font-style: normal;
   width: 343px;
+  box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
+  border-radius: 8px;
+  padding: 40px;
+  min-height: 363px;
 }
 
 .contacts-caption {
   color: #565C66;
   line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .contacts-text {
@@ -554,18 +610,27 @@ img {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
+.contacts-tel {
+  margin-bottom: 0;
+}
 .contacts-desc {
   color: #565C66;
   font-size: 14px;
   line-height: 20px;
+  flex-grow: 1;
+  margin-top: 0;
 }
 
 /*********** Подвал страницы ***********/
 
 .page-footer {
   display: flex;
+  margin-top: 48px;
+  margin-bottom: 48px;
   /* Sticky footer */
   flex-grow: 0;
   flex-shrink: 0;
@@ -574,10 +639,30 @@ img {
 .footer-socials-list {
   width: 370px;
   margin-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 4px;
+}
+
+.footer-socials-item {
+  margin-right: 16px;
 }
 
 .footer-menu-list {
   width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.footer-menu-item {
+  width: 126px;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+.footer-menu-item:nth-child(2n) {
+  width: 182px;
 }
 
 .footer-menu-link {
@@ -585,6 +670,12 @@ img {
   font-size: 14px;
   line-height: 20px;
   text-decoration: none;
+}
+
+.footer-menu-item:nth-child(2n) {
+  /* flex-grow: 1;
+  min-width: 183px;
+  background-color: #69A9FF; */
 }
 
 .footer-menu-item--emphasize {
@@ -600,11 +691,17 @@ img {
   color: #2D3440;
   font-size: 12px;
   line-height: 16px;
+  margin: 0;
 }
 
 .copyright-link {
   color: inherit;
   text-decoration: none;
+}
+
+.htmlacademy-logo-link {
+  display: block;
+  margin-bottom: 15px;
 }
 
 /*********** Каталог  ***********/

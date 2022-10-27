@@ -95,6 +95,7 @@
               </div>
             </li>
           </ol>
+          <!-- Пагинация слайдера -->
           <div class="wrapper-slider-bottom">
             <ol class="slider-pagination">
               <li class="slider-pagination-item">
@@ -259,7 +260,7 @@
             <p class="delivery-text">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
           </div>
           <form class="delivery-form" name="delivery-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="delivery-form-text">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+            <p class="delivery-form-text">Укажите адрес и дату доставки, и мы свяжемся<br> с вами, чтобы подтвердить заказ.</p>
             <p class="delivery-form-date">
               <label class="form-label" for="delivery-date">Дата</label>
               <input class="form-input" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020" required>
@@ -272,7 +273,9 @@
               <label class="form-label" for="delivery-address">Адрес</label>
               <input class="form-input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
             </p>
-            <button class="button-common button-common--extra" type="submit">Отправить</button>
+            <p class="wrapper-button">
+              <button class="button-common button-common--extra" type="submit">Отправить</button>
+            </p>
           </form>
         </section>
 
@@ -280,12 +283,14 @@
         <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <address class="contacts-address">
-            <p class="contacts-caption">Адрес главного офиса и офлайн-магазина:<p>
-            <b class="contacts-text">наб. реки Карповки, 5 лит П,<br> Санкт-Петербург</b>
-            <p class="contacts-caption">Для заказов по телефону:<p>
-            <a class="contacts-text" href="tel:+78128121212">+7 (812) 812-12-12</a>
-            <p class="contacts-desc">(с 10 до 20 ежедневно)<p></p>
-            <a class="button-common button-common--extra button-feedback" href="#">Форма обратной связи</a>
+            <p class="contacts-caption">Адрес главного офиса<br> и офлайн-магазина:</p>
+            <p class="contacts-text">наб. реки Карповки,<br> 5 лит П, Санкт-Петербург</p>
+            <p class="contacts-caption">Для заказов по телефону:</p>
+            <a class="contacts-text contacts-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <p class="contacts-desc">(с 10 до 20 ежедневно)</p>
+            <p>
+              <a class="button-common button-common--extra button-feedback" href="#">Форма обратной связи</a>
+            </p>
           </address>
         </section>
       </main>
