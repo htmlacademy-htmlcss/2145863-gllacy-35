@@ -181,9 +181,17 @@ img {
 
 /* Основная кнопка пагинации каталога*/
 .pagination-link {
+  display: block;
   color: inherit;
-  line-height: 20px;
   text-decoration: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.pagination-link--current {
+  background-color: #FCFCFC;
 }
 
 /*********** Формы ***********/
@@ -207,6 +215,7 @@ img {
   font-size: 14px;
   line-height: 20px;
   width: 823px;
+  margin-bottom: 44px;
 }
 
 /*********** Типовые стили ***********/
@@ -402,7 +411,8 @@ img {
   margin-bottom: 56px;
 }
 
-.popular-list {
+.popular-list,
+.product-list {
   display: flex;
   flex-wrap: wrap;
 }
@@ -708,11 +718,16 @@ img {
 
 /* Хлебные крошки */
 .breadcrumbs {
+  display: flex;
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
   list-style-type: none;
   padding: 0;
+}
+
+.breadcrumbs-item {
+  margin-right: 28px;
 }
 
 .breadcrumbs-link {
@@ -722,6 +737,8 @@ img {
 
 .catalog-title {
   text-align: left;
+  margin-top: 16px;
+  margin-bottom: 40px;
 }
 
 /* фильтр */
@@ -803,6 +820,8 @@ img {
 
 .products-pagination-list {
   width: 397px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .products-show-more {
