@@ -799,6 +799,9 @@ img {
   margin-top: -51px;
   border-radius: 50%;
   margin-bottom: -6px;
+  max-width: 100%;
+  object-fit: contain;
+
 }
 
 .product-link {
