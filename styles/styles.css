@@ -359,9 +359,15 @@ img {
 
 
 /* Промо блок */
-
 .promo {
   margin-bottom: 81px;
+}
+
+.promo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap : 30px;
 }
 
 .promo-title {
