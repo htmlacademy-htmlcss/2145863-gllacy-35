@@ -212,6 +212,7 @@ img {
 .form-label {
   line-height: 20px;
   font-weight: 700;
+  padding-bottom: 8px;
 }
 
 /* Формы фильтра */
@@ -567,13 +568,35 @@ img {
   padding: 103px 135px 36px 36px;
 }
 
+.container-delivery-form {
+  display: grid;
+  grid-template-columns: 117px 287px;
+  gap: 16px;
+}
+
 .delivery-form {
   box-sizing: border-box;
-  background-color: #FCFCFC;
+  background-color: hsl(0, 0%, 99%);
   border-radius: 8px;
   box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
   width: 500px;
   padding: 40px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.delivery-form-address {
+  grid-column: 1/-1;
+}
+
+.delivery-form-button {
+  grid-column: 1/-1 ;
+  justify-self: center;
+  padding-top: 12px;
 }
 
 .delivery-form-text {
@@ -586,10 +609,6 @@ img {
 .delivery-text {
   color: #565C66;
   line-height: 22px;
-}
-
-.wrapper-button {
-  text-align: center;
 }
 
 /* Блок контакты */
