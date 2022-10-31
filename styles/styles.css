@@ -422,8 +422,17 @@ img {
 
 .popular-list,
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4,270px);
+  gap: 40px 30px;
+}
+
+.popular-list {
+  margin-bottom: 80px;
+}
+
+.product-list {
+  margin-bottom: 16px;
 }
 
 /* Блок с преимуществами */
@@ -432,7 +441,6 @@ img {
   background: #FFFFFF url("../images/waffle-background.jpg") -30px;
   background-size: auto 480px;
   min-height: 480px;
-  margin-top: 40px;
   margin-bottom: 80px;
   padding: 24px;
   border-radius: 16px;
@@ -441,7 +449,6 @@ img {
 .container-advantages {
   background-color: #FFFFFF;
   padding: 56px 40px;
-  padding-bottom: 16px;
   border-radius: 16px;
 }
 
@@ -451,21 +458,15 @@ img {
 }
 
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 25px;
 }
 
 .advantages-item {
-  box-sizing: border-box;
   color: #565C66;
   line-height: 22px;
-  width: 505px;
   padding-left: 64px;
-  margin-bottom: 40px;
-}
-
-.advantages-item:nth-child(2n) {
-  margin-left: 32px;
 }
 
 .wrapper-columns {
@@ -781,12 +782,7 @@ img {
 .product {
   width: 270px;
   min-height: 332px;
-  margin-bottom: 40px;
   display: flex;
-}
-
-.product:not(:nth-child(4n)) {
-  margin-right: 30px;
 }
 
 .wrapper-product-fill {
@@ -840,21 +836,22 @@ img {
 }
 
 .container-products-bottom {
-  display: flex;
-  padding-left: 397px;
-}
-
-.wrapper-show-more {
-  flex-grow: 1;
-}
-
-.products-pagination-list {
-  width: 397px;
-  display: flex;
-  justify-content: flex-end;
+  min-height: 126px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". button pagination";
 }
 
 .products-show-more {
-  margin: 0 auto;
+  grid-area: button;
   display: block;
+  margin: auto;
+}
+
+.products-pagination-list {
+  grid-area: pagination;
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
