@@ -69,6 +69,11 @@ img {
   flex-grow: 1;
 }
 
+.main-inner {
+  flex-grow: 1;
+  padding-top: 32px;
+}
+
 /*********** Кнопки ***********/
 
 /* кнопка меню (текст) */
@@ -92,7 +97,6 @@ img {
   text-decoration: none;
   box-sizing: border-box;
   padding: 6px 16px;
-  margin-left: 16px;
   margin-bottom: 6px;
   margin-top: 6px;
   min-width: 32px;
@@ -208,6 +212,7 @@ img {
 .form-label {
   line-height: 20px;
   font-weight: 700;
+  padding-bottom: 8px;
 }
 
 /* Формы фильтра */
@@ -266,7 +271,6 @@ img {
 
 .logo-link {
   margin-right: 16px;
-  /* устраняет разницу в высоте изображения и ссылки-обертки */
   height: 56px;
 }
 
@@ -292,6 +296,10 @@ img {
   flex-wrap: wrap;
   align-items: center;
   height: 100%;
+}
+
+.navigation-controls-item {
+  margin-left: 16px;
 }
 
 /*********** Главный блок ***********/
@@ -352,20 +360,21 @@ img {
 
 
 /* Промо блок */
-
 .promo {
   margin-bottom: 81px;
+}
+
+.promo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap : 30px;
 }
 
 .promo-title {
   width: 432px;
   margin: 0 auto;
   margin-bottom: 55px;
-}
-
-.promo-list {
-  display: flex;
-  justify-content: space-between;
 }
 
 .promo-item {
@@ -413,8 +422,17 @@ img {
 
 .popular-list,
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4,270px);
+  gap: 40px 30px;
+}
+
+.popular-list {
+  margin-bottom: 80px;
+}
+
+.product-list {
+  margin-bottom: 16px;
 }
 
 /* Блок с преимуществами */
@@ -423,7 +441,6 @@ img {
   background: #FFFFFF url("../images/waffle-background.jpg") -30px;
   background-size: auto 480px;
   min-height: 480px;
-  margin-top: 40px;
   margin-bottom: 80px;
   padding: 24px;
   border-radius: 16px;
@@ -432,7 +449,6 @@ img {
 .container-advantages {
   background-color: #FFFFFF;
   padding: 56px 40px;
-  padding-bottom: 16px;
   border-radius: 16px;
 }
 
@@ -442,21 +458,15 @@ img {
 }
 
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 25px;
 }
 
 .advantages-item {
-  box-sizing: border-box;
   color: #565C66;
   line-height: 22px;
-  width: 505px;
   padding-left: 64px;
-  margin-bottom: 40px;
-}
-
-.advantages-item:nth-child(2n) {
-  margin-left: 32px;
 }
 
 .wrapper-columns {
@@ -559,13 +569,35 @@ img {
   padding: 103px 135px 36px 36px;
 }
 
+.container-delivery-form {
+  display: grid;
+  grid-template-columns: 117px 287px;
+  gap: 16px;
+}
+
 .delivery-form {
   box-sizing: border-box;
-  background-color: #FCFCFC;
+  background-color: hsl(0, 0%, 99%);
   border-radius: 8px;
   box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
   width: 500px;
   padding: 40px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.delivery-form-address {
+  grid-column: 1/-1;
+}
+
+.delivery-form-button {
+  grid-column: 1/-1 ;
+  justify-self: center;
+  padding-top: 12px;
 }
 
 .delivery-form-text {
@@ -578,10 +610,6 @@ img {
 .delivery-text {
   color: #565C66;
   line-height: 22px;
-}
-
-.wrapper-button {
-  text-align: center;
 }
 
 /* Блок контакты */
@@ -712,6 +740,7 @@ img {
 .htmlacademy-logo-link {
   display: block;
   margin-bottom: 15px;
+  height: 27px;
 }
 
 /*********** Каталог  ***********/
@@ -724,6 +753,8 @@ img {
   font-weight: 700;
   list-style-type: none;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .breadcrumbs-item {
@@ -737,7 +768,7 @@ img {
 
 .catalog-title {
   text-align: left;
-  margin-top: 16px;
+  margin-top: 0;
   margin-bottom: 40px;
 }
 
@@ -751,12 +782,7 @@ img {
 .product {
   width: 270px;
   min-height: 332px;
-  margin-bottom: 40px;
   display: flex;
-}
-
-.product:not(:nth-child(4n)) {
-  margin-right: 30px;
 }
 
 .wrapper-product-fill {
@@ -773,6 +799,9 @@ img {
   margin-top: -51px;
   border-radius: 50%;
   margin-bottom: -6px;
+  max-width: 100%;
+  object-fit: contain;
+
 }
 
 .product-link {
@@ -810,21 +839,22 @@ img {
 }
 
 .container-products-bottom {
-  display: flex;
-  padding-left: 397px;
-}
-
-.wrapper-show-more {
-  flex-grow: 1;
-}
-
-.products-pagination-list {
-  width: 397px;
-  display: flex;
-  justify-content: flex-end;
+  min-height: 126px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". button pagination";
 }
 
 .products-show-more {
-  margin: 0 auto;
+  grid-area: button;
   display: block;
+  margin: auto;
+}
+
+.products-pagination-list {
+  grid-area: pagination;
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
