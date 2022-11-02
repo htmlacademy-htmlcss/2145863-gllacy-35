@@ -121,7 +121,7 @@ img {
   min-height: 44px;
   min-width: 44px;
   border: 4px solid #F9CBD8;
-  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
 }
 
@@ -512,7 +512,7 @@ img {
 
 /* Блок подписки на рассылку */
 .subscribe {
-  background: repeating-linear-gradient(-45deg , #69A9FF 0px, #69A9FF 8px, #EDF1F5 8px, #EDF1F5 24px, #FF2F64 24px, #FF2F64 32px, #EDF1F5 32px, #EDF1F5 48px);
+  background: repeating-linear-gradient(-45deg , #69A9FF 0, #69A9FF 8px, #EDF1F5 8px, #EDF1F5 24px, #FF2F64 24px, #FF2F64 32px, #EDF1F5 32px, #EDF1F5 48px);
   background-color: #FFFFFF;
   width: 570px;
   border-radius: 16px;
@@ -579,7 +579,7 @@ img {
   box-sizing: border-box;
   background-color: hsl(0, 0%, 99%);
   border-radius: 8px;
-  box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
   width: 500px;
   padding: 40px;
 }
@@ -630,7 +630,7 @@ img {
   background-color: #FCFCFC;
   font-style: normal;
   width: 343px;
-  box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
   padding: 40px;
   min-height: 363px;
@@ -708,12 +708,6 @@ img {
   font-size: 14px;
   line-height: 20px;
   text-decoration: none;
-}
-
-.footer-menu-item:nth-child(2n) {
-  /* flex-grow: 1;
-  min-width: 183px;
-  background-color: #69A9FF; */
 }
 
 .footer-menu-item--emphasize {
