@@ -502,6 +502,14 @@ img {
 }
 
 /* Основная кнопка пагинации каталога*/
+.pagination-link--prev,
+.pagination-link--next {
+  background: url("../images/icons/arrow-right.svg") no-repeat center;
+}
+.pagination-link--prev {
+  transform: rotate(180deg);
+}
+
 .pagination-link {
   display: block;
   color: inherit;
@@ -511,11 +519,31 @@ img {
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
+  outline-offset: -1px;
+}
+
+.pagination-link:hover:not(.pagination-link--current):not(.pagination-link--disabled) {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.pagination-link:active:not(.pagination-link--current):not(.pagination-link--disabled) {
+  outline: 1px solid #FCFCFC;
+  /* outline-offset: -1px; */
+}
+
+.pagination-link:focus-visible:not(.pagination-link--current):not(.pagination-link--disabled) {
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 1px solid #2D3440;
 }
 
 .pagination-link--current {
   background-color: #FCFCFC;
   cursor: auto;
+}
+
+.pagination-link--disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 
 /*********** Формы ***********/
@@ -1164,11 +1192,11 @@ img {
 
 .footer-menu-item {
   width: 153px;
-  margin-top: -2px;
 }
 
 .footer-menu-item:nth-child(2n) {
   width: 212px;
+  margin-left: -1px;
 }
 
 .footer-menu-link {
@@ -1250,12 +1278,37 @@ img {
 }
 
 .breadcrumbs-item {
+  position: relative;
   margin-right: 28px;
 }
 
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: url("../images/icons/chevrons-right.svg") no-repeat;
+  top: 4px;;
+  right: -21px;
+}
+
 .breadcrumbs-link {
+  position: relative;
   text-decoration: none;
   color: inherit;
+}
+
+.breadcrumbs-link:hover:not(.breadcrumbs-link--current) {
+  opacity: 0.7;
+}
+
+
+.breadcrumbs-link--current::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #2D3440;
+  bottom: -2px;
 }
 
 .catalog-title {
