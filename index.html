@@ -73,27 +73,15 @@
         <section class="slider">
           <h2 class="visually-hidden">Слайдер с мороженым</h2>
           <ol class="slider-list">
-            <li class="slide">
+            <li class="slide slide-1">
               <div class="wrapper-slider-left">
                 <h3 class="slide-title">Нежный пломбир<br> с клубничным джемом</h3>
                 <p class="slide-text">Натуральное мороженое из свежих сливок<br> и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-                <!-- добавить .spinner--common - для реализации спиннера -->
-                <button class="button-common" href="#">Заказать</button>
+                <!-- добавить .spinner- -common - для реализации спиннера -->
+                <button class="button-common">Заказать</button>
               </div>
               <div class="wrapper-slider-center">
                 <img class="slide-image" src="images/slider/slide-1.png" width="306" height="507" alt="Рожок мороженого с клубничным джемом.">
-                <button class="button-slider-arrow button-slider--prev" type="button">
-                  <span class="visually-hidden">Предыдущий слайд</span>
-                  <svg class="icon-arrow" width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8033 3.80515C10.063 3.54545 10.063 3.12439 9.8033 2.8647C9.54361 2.605 9.12255 2.605 8.86285 2.8647L4.19477 7.53277C3.93593 7.79162 3.93508 8.21075 4.19221 8.47065C4.19338 8.47183 4.19454 8.47301 4.19572 8.47418L8.8638 13.1423C9.12349 13.402 9.54455 13.402 9.80425 13.1423C10.0639 12.8826 10.0639 12.4615 9.80425 12.2018L5.60545 8.00301L9.8033 3.80515Z"/>
-                  </svg>
-                </button>
-                <button class="button-slider-arrow button-slider--next" type="button">
-                  <span class="visually-hidden">Следующий слайд</span>
-                  <svg class="icon-arrow" width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.13526 2.8647C6.87557 2.605 6.45451 2.605 6.19481 2.8647C5.93511 3.12439 5.93511 3.54545 6.19481 3.80515L10.3961 8.00643L6.19477 12.2077C5.93508 12.4674 5.93508 12.8885 6.19477 13.1482C6.45447 13.4079 6.87553 13.4079 7.13523 13.1482L11.804 8.47944C11.8049 8.47852 11.8058 8.47759 11.8068 8.47666C12.0665 8.21696 12.0665 7.79591 11.8068 7.53621L7.13526 2.8647Z" />
-                  </svg>
-                </button>
               </div>
               <div class="wrapper-slider-right">
                 <div class="slide-icecream slide-icecream--banana"></div>
@@ -101,11 +89,11 @@
               </div>
             </li>
             <!-- Временно скрыт -->
-            <li class="slide visually-hidden">
+            <li class="slide slide-2">
               <div class="wrapper-slider-left">
                 <h3 class="slide-title">Сливочное мороженое со вкусом банана</h3>
                 <p class="slide-text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
-                <a class="button-common" href="#">Заказать</a>
+                <button class="button-common">Заказать</button>
               </div>
               <div class="wrapper-slider-center">
                 <img class="slide-image" src="images/slider/slide-2.png" width="306" height="507" alt="Рожок мороженого со вкусом банана.">
@@ -116,26 +104,39 @@
               </div>
             </li>
             <!-- Временно скрыт -->
-            <li class="slide visually-hidden">
+            <li class="slide slide-3">
               <div class="wrapper-slider-left">
                 <h3 class="slide-title">Карамельный пломбир<br> с маршмеллоу</h3>
-                <p class="slide-text">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-                <a class="button-common" href="#">Заказать</a>
+                <p class="slide-text">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет<br> сердца сладкоежек всех возрастов.</p>
+                <button class="button-common">Заказать</button>
               </div>
               <div class="wrapper-slider-center">
                 <img class="slide-image" src="images/slider/slide-3.png" width="306" height="507" alt="Рожок мороженого с карамелью и маршмеллоу.">
               </div>
               <div class="wrapper-slider-right">
-                <div class="slide-icecream slide-icecream--strawberry" focusable="false"></div>
-                <div class="slide-icecream slide-icecream--banana" focusable="false"></div>
+                <div class="slide-icecream slide-icecream--strawberry"></div>
+                <div class="slide-icecream slide-icecream--banana"></div>
               </div>
             </li>
           </ol>
+          <!-- Кнопки управления слайдером -->
+          <button class="button-slider-arrow button-slider--prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+            <svg class="icon-arrow" width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8033 3.80515C10.063 3.54545 10.063 3.12439 9.8033 2.8647C9.54361 2.605 9.12255 2.605 8.86285 2.8647L4.19477 7.53277C3.93593 7.79162 3.93508 8.21075 4.19221 8.47065C4.19338 8.47183 4.19454 8.47301 4.19572 8.47418L8.8638 13.1423C9.12349 13.402 9.54455 13.402 9.80425 13.1423C10.0639 12.8826 10.0639 12.4615 9.80425 12.2018L5.60545 8.00301L9.8033 3.80515Z"/>
+            </svg>
+          </button>
+          <button class="button-slider-arrow button-slider--next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+            <svg class="icon-arrow" width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.13526 2.8647C6.87557 2.605 6.45451 2.605 6.19481 2.8647C5.93511 3.12439 5.93511 3.54545 6.19481 3.80515L10.3961 8.00643L6.19477 12.2077C5.93508 12.4674 5.93508 12.8885 6.19477 13.1482C6.45447 13.4079 6.87553 13.4079 7.13523 13.1482L11.804 8.47944C11.8049 8.47852 11.8058 8.47759 11.8068 8.47666C12.0665 8.21696 12.0665 7.79591 11.8068 7.53621L7.13526 2.8647Z" />
+            </svg>
+          </button>
           <!-- Пагинация слайдера -->
           <div class="wrapper-slider-bottom">
             <ol class="slider-pagination">
               <li class="slider-pagination-item">
-                <button class="button-slider-pagination button-slider-pagination--current" focusable="false" type="button" disabled>
+                <button class="button-slider-pagination button-slider-pagination--current" type="button" disabled>
                   <span class="visually-hidden">Слайд 1</span>
                 </button>
               </li>
@@ -156,19 +157,19 @@
                     <!-- .icon введен для управления прозрачностью всего элемента в состоянии :active -->
                     <!-- в противном случае просвечивает темную подложку                              -->
                     <!-- socials-link:has(:active) не работает в firefox                              -->
-                    <span class="icon"  aria-hidden="true" focusable="false"></span>
+                    <span class="icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Telegram</span>
                   </a>
               </li>
               <li class="slider-socials-item">
                 <a class="socials-link icon-vk" href="#" target="_blank">
-                  <span class="icon"  aria-hidden="true" focusable="false"></span>
+                  <span class="icon"  aria-hidden="true"></span>
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
               <li class="slider-socials-item">
                 <a class="socials-link icon-youtube" href="#" target="_blank">
-                  <span class="icon"  aria-hidden="true" focusable="false"></span>
+                  <span class="icon"  aria-hidden="true"></span>
                   <span class="visually-hidden">Youtube</span>
                 </a>
               </li>
@@ -295,6 +296,7 @@
                   <input class="form-input" type="email" name="subscribe-email" placeholder="email@example.com" required>
                   <button class="button-common button-common--extra" type="submit">Отправить</button>
                 </form>
+              </div>
           </section>
         </div>
         <!-- Блок доставки -->
@@ -346,19 +348,19 @@
         <ul class="footer-socials-list">
           <li class="footer-socials-item">
             <a class="socials-link icon-telegram" href="https://t.me/htmlacademy" target="_blank">
-              <span class="icon"  aria-hidden="true" focusable="false"></span>
+              <span class="icon"  aria-hidden="true"></span>
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-socials-item">
             <a class="socials-link icon-vk" href="https://vk.com/htmlacademy" target="_blank">
-              <span class="icon"  aria-hidden="true" focusable="false"></span>
+              <span class="icon"  aria-hidden="true"></span>
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="footer-socials-item">
             <a class="socials-link icon-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-              <span class="icon"  aria-hidden="true" focusable="false"></span>
+              <span class="icon"  aria-hidden="true"></span>
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
