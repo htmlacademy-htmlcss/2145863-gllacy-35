@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .overlay {
+      position: fixed;
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      background-color: yellow;
+    }
+
+    .test-subscribe
+    {
+      position: relative;
+      width: 570px;
+      height: 224px;
+      background-color: white;
+      margin: auto;
+      border-radius: 16px;
+    }
+    .controls {
+      /* padding-left: 100px; */
+      margin: auto;
+      margin-right: 100px;
+    }
+
+    .test-subscribe::after {
+      content: "";
+      background-color: transparent;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+    }
+
+    .test-subscribe-back::after {
+      background: url("../images/gradient-png.png");
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="overlay">
+      <div class="controls">
+        <p>
+          <label>показать образец: <input name="show-background" type="checkbox" onchange="togleBackgrond()"></label>
+        </p>
+        <fieldset class="form">
+        <p>
+          <label>Градусы: <input class="deg" name="deg" type="number" value="-49.3"></label>
+        </p>
+        <p>
+          <label>Пространство белого: <input class="space" step="0.01" name="space" type="number" value="14"></label>
+        </p>
+        <p>
+          <label>Ширина полосы: <input class="ribbon" step="0.01"type="number" value="8"></label>
+        </p>
+        <p>
+          <label>Смещение: <input class="delta" step="0.01" type="number" value="0"></label>
+        </p>
+        </fieldset>
+        <button class="apply">Применить</button>
+
+      </div>
+      <!-- Блок подписки на рассылку -->
+      <section class="test-subscribe">
+
+        <!-- <h2 class="visually-hidden">Оформление подписки</h2>
+        <div class="">
+          <p class="subscribe-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form name="subscribe" action="https://echo.htmlacademy.ru" method="post">
+            <input class="form-input" type="email" name="subscribe-email" placeholder="email@example.com" required>
+            <button class="button-common button-common--extra" type="submit">Отправить</button>
+          </form> -->
+
+    </section>
+  </div>
+
+  <script>
+    let button = document.querySelector('.apply');
+    let showBackground = document.querySelector('.showBackground');
+    let fill = document.querySelector('.test-subscribe');
+    let fill_after =  document.querySelector('.test-subscribe');
+    console.log(fill_after);
+
+    let inputs = document.querySelectorAll('.form input');
+     inputs.forEach(input => {
+      input.onchange = function() {
+        let deg = +document.querySelector('.deg').value;
+        let space = +document.querySelector('.space').value;
+        let ribbon = +document.querySelector('.ribbon').value;
+        let delta = +document.querySelector('.delta').value;
+
+        const white = '#EDF1F5';
+        const red = '#FF2F64';
+        const blue = '#69A9FF';
+        let col1 = white;
+        let col2 = blue;
+        let col3 = red;
+
+        let style = `background: repeating-linear-gradient(${deg}deg,
+                    ${col1} ${'0'}, ${col1} ${space-delta}px,
+                    ${col2} ${space-delta}px, ${col2} ${space-delta+ribbon}px,
+                    ${col1} ${space-delta+ribbon}px, ${col1} ${2*space-delta+ribbon}px,
+                    ${col3} ${2*space-delta+ribbon}px, ${col3} ${2*space-delta+2*ribbon}px,
+                    ${col1} ${2*space-delta+2*ribbon}px, ${col1} ${2*space-delta+delta+2*ribbon}px);`;
+        console.log(style);
+        fill.style = style;
+      }
+     });
+
+    // console.log(showBackground);
+
+    function togleBackgrond() {
+      let showBackground = document.querySelector('input[name="show-background"]');
+        if (showBackground.checked) {
+          fill.classList.add('test-subscribe-back');
+        } else {
+          fill.classList.remove('test-subscribe-back');
+        }
+    }
+
+    // showBackground.change = function(evt){
+    //   // let showBackground = document.querySelector('input[name="show-background"]');
+    //   console.log(evt);
+    //   console.log('Change');
+    //   // if this.checked {
+    //   //   // .style.background = color;
+    //   //   fill_after.style.background = url("../images/gradient-png.png");
+    //   // } else {
+    //   //   fill_after.style.background = none;
+    //   // }
+
+    // };
+
+    button.onclick = function() {
+      let deg = +document.querySelector('.deg').value;
+      let space = +document.querySelector('.space').value;
+      let ribbon = +document.querySelector('.ribbon').value;
+      let delta = +document.querySelector('.delta').value;
+
+      const white = '#EDF1F5';
+      const red = '#FF2F64';
+      const blue = '#69A9FF';
+      let col1 = white;
+      let col2 = blue;
+      let col3 = red;
+
+      /*
+      1) 0-бел(кон)
+      2) кр(нач) - кр(кон) _
+      3) _ бел(нач) - бел(кон) __
+      4) __ ()
+      */
+      // let style = `background: repeating-linear-gradient(${deg}deg,
+      //               ${col1} ${'0'}, ${col1} ${space-delta}px,
+      //               ${col2} ${space-delta}px, ${col2} ${space-delta+ribbon}px,
+      //               ${col1} ${space-delta+ribbon}px, ${col1} ${2*space-delta+ribbon}px,
+      //               ${col3} ${2*space-delta+ribbon}px, ${col3} ${2*space-delta+2*ribbon}px)
+      //               ${col1} ${2*space-delta+2*ribbon}px ${col1} ${2*space-delta+2*ribbon}px`;
+      // console.log(style);
+      // console.log(fill);
+      // fill.style = style;
+      // style = background: repeating-linear-gradient(-49.3deg ,#EDF1F5 0, #EDF1F5 14.1px, #69A9FF 14.1px,  #69A9FF  22.2px, #EDF1F5 22.2px, #EDF1F5 36.4px, #FF2F64 36.4px, #FF2F64 44.6px) repeat 30px 50px;
+    };
+  </script>
+
+</body>
+</html>
