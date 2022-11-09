@@ -152,7 +152,9 @@ img {
 }
 .button-text:focus-visible,
 .button-text-icon:focus-visible {
+  background-color: rgba(252, 252, 252, 0.5);
   outline: 2px solid #000000;
+  outline-offset: -2px;
 }
 
 .button-text:active,
@@ -997,9 +999,9 @@ img {
 .subscribe {
   background: repeating-linear-gradient(-49.5deg,
     #EDF1F5 0, #EDF1F5 10.29px,
-    #69A9FF 10.29px, #69A9FF 18.659999999999997px,
-    #EDF1F5 18.659999999999997px, #EDF1F5 32.6px,
-    #FF2F64 32.6px, #FF2F64 40.97px,
+    #69A9FF 10.29px, #69A9FF 18.66px,
+    #EDF1F5 18.66px, #EDF1F5 32.60px,
+    #FF2F64 32.60px, #FF2F64 40.97px,
     #EDF1F5 40.97px, #EDF1F5 44.62px);
   background-color: #FFFFFF;
   width: 570px;
