@@ -496,11 +496,42 @@ img {
 
 /* Кнопка применения фильтра */
 .button-filter-apply {
+  display: inline-block;
   color: #2D3440;
   background-color: rgba(252, 252, 252, 0.3);
+  border: none;
+  outline: 2px solid #FCFCFC;
+  border-radius: 20px;
   font-family: "Inter", sans-serif;
+  font-weight: 700;
   line-height: 20px;
+  font-size: 14px;
   cursor: pointer;
+  padding: 8px 53px;
+  margin-left: 17px;
+  min-height: 36px;
+  text-align: center;
+  align-self: end;
+  margin-bottom: 2px;
+}
+
+.button-filter-apply:hover:not(:active):not(:disabled) {
+  background: #FCFCFC;
+  outline: 2px solid rgba(252, 252, 252, 0.3);
+}
+
+.button-filter-apply:active {
+  background: rgba(252, 252, 252, 0.5);
+  outline: none;
+}
+
+.button-filter-apply:focus-visible {
+  background: rgba(252, 252, 252, 0.3);
+  outline: 2px solid #2D3440;
+}
+
+.button-filter-apply:disabled {
+  opacity: 0.4;
 }
 
 /* Основная кнопка пагинации каталога*/
@@ -612,10 +643,251 @@ img {
 
 /* Формы фильтра */
 .catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
   font-size: 14px;
   line-height: 20px;
-  width: 823px;
+  width: 100%;
   margin-bottom: 44px;
+}
+
+.catalog-filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-group:not(:last-of-type) {
+  margin-right: 24px;
+}
+
+.catalog-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(252, 252, 252, 0.3);
+  padding: 8px 24px;
+  margin: 0;
+  list-style-type: none;
+  border-radius: 18px;
+}
+
+.catalog-filter-list--bottom {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.catalog-filter-title {
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+
+.control-select {
+  padding: 8px 57px 8px 16px;
+  border: none;
+  border-radius: 18px;
+  appearance: none;
+  letter-spacing: 0.35px;
+  background: url("../images/icons/arrow-down.svg") no-repeat;
+  background-position: center right 12px;
+  background-color: rgb(252, 252, 252, 0.3);
+}
+
+.control-select:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.control-select:focus-visible {
+  background-color: rgba(252, 252, 252, 0.4);
+  outline: 2px solid #FCFCFC;
+  outline-offset: -2px;
+}
+
+.control {
+  position: relative;
+  padding-left: 24px;
+}
+.catalog-filter-item:not(:last-child) {
+  padding-right: 17px;
+}
+
+
+.control-mark,
+.control-mark-radio {
+  position: absolute;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  bottom: 0;
+  left: 0;
+}
+
+.control-mark {
+  background: url("../images/icons/square-mark-black.svg");
+}
+
+.control-mark-radio {
+  border-radius: 50%;
+  border: 1.6px solid #2D3440;
+}
+
+.control-input:not(:disabled):focus-visible + .control-mark-radio,
+.control-input:not(:disabled):hover + .control-mark-radio {
+  border-color: #FCFCFC;
+}
+.control-input:not(:disabled):focus-visible + .control-mark-radio::after,
+.control-input:not(:disabled):hover + .control-mark-radio::after {
+  background-color: #FCFCFC;
+}
+
+.control-input:disabled + .control-mark-radio,
+.control-input:not(:disabled):hover + .control-mark-radio::after {
+  opacity: 0.5;
+}
+
+.control-input:checked + .control-mark-radio::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2D3440;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.control-input:checked + .control-mark {
+  background: url("../images/icons/check-mark-black.svg");
+}
+
+.control-input:not(:disabled):focus-visible + .control-mark,
+.control-input:not(:disabled):hover + .control-mark {
+  background: url("../images/icons/square-mark-white.svg");
+}
+
+.control-input:not(:disabled):checked:focus-visible + .control-mark,
+.control-input:not(:disabled):checked:hover + .control-mark {
+  background: url("../images/icons/check-mark-white.svg");
+}
+
+.control-input:disabled + .control-mark {
+  opacity: 0.5;
+  /* background: url("../images/icons/check-mark-white.svg"); */
+}
+
+
+
+.catalog-filter-label {
+  margin: 0;
+  margin-bottom: 8px;
+  padding-left: 16px;
+}
+
+.range {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 24px;
+}
+
+.range-input {
+  background-color: transparent;
+  font: inherit;
+  border: none;
+  outline: none;
+  height: 20px;
+  width: 27px;
+  padding: 0 2px;
+  text-align: center;
+  appearance: textfield;
+  border-radius: 5px;
+}
+
+.range-input:hover {
+  /* opacity: 0.7; */
+  background-color: rgb(252, 252, 252, 0.1);
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.range-scale {
+  position: relative;
+  height: 36px;
+  width: 196px;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;;
+}
+
+/* Основная линия слайдера */
+.range-scale::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 16px*2);
+  height: 2px;
+  background-color: rgba(86, 92, 102, 0.3);
+  border-radius: 2px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.range-central-line {
+  position: absolute;
+  height: 2px;
+  background-color: #565C66;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.range-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fcfcfc;
+  border: 6px solid #2D3440;
+}
+
+.range-control--min {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.range-control--max {
+  right: 0;
+  transform: translateX(50%);
+}
+
+.range-control:hover {
+  background-color: #2D3440 ;
+  border-color: #fcfcfc;
+}
+
+.range-control:active {
+  /* background-color: #2D3440 ; */
+  border-color: #2D3440;
+}
+
+.range-control:focus-visible {
+  background-color: #2D3440 ;
+  border-color: #fcfcfc;
+  outline: 2px solid #2D3440;
+}
+
+.range-control:focus-visible:hover {
+  outline: 3px solid #2D3440;
 }
 
 /*********** Типовые стили ***********/
@@ -639,7 +911,6 @@ img {
 .advantages-list,
 .footer-socials-list,
 .footer-menu-list,
-.catalog-filter-list,
 .product-list,
 .products-pagination-list {
   list-style-type: none;
