@@ -72,7 +72,7 @@ img {
 .main-inner {
   flex-grow: 1;
   padding-top: 32px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
   border-bottom: 1px solid rgba(252, 252, 252, 0.3);
 }
 
@@ -122,6 +122,15 @@ img {
   border: none;
   border-radius: 30px;
   cursor: pointer;
+}
+
+.button-text-icon[type="button"]:hover,
+.button-text-icon[type="button"]:active {
+  transition: all ease-out 100ms;
+}
+
+.button-text-icon[type="button"].active:hover {
+  transition: all ease-out 300ms;
 }
 
 .navigation-icon,
@@ -213,11 +222,14 @@ img {
 .button-common:hover {
   background: rgba(252, 252, 252, 0.4);
   outline: 4px solid #FCFCFC;
+  box-shadow: 0 4px 15px rgba(133, 133, 133, 0.15);
+  transition: all 100ms ease-out;
 }
 
 .button-common:active {
   background: #FCFCFC;
   outline: 2px solid #2D3440;
+  transition: all 100ms ease-out;
 }
 
 .button-common:focus-visible {
@@ -229,6 +241,7 @@ img {
   color: #B9B9B9;
   background: #E7E7E7;
   outline:  4px solid rgba(252, 252, 252, 0.4);
+  box-shadow: none;
 }
 
 /* Дополнительная кнопка */
@@ -236,12 +249,14 @@ img {
   color: #FCFCFC;
   background-color: #FF2F64;
   outline:  4px solid rgba(255, 47, 100, 0.3);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .button-common--extra:hover {
   color: #2D3440;
   background-color: rgba(252, 252, 252, 0.3);
   outline: 4px solid #FF2F64;
+  box-shadow: none;
 }
 
 .button-common--extra:active {
@@ -264,6 +279,7 @@ img {
   color: #565C66;
   background: #B9B9B9;
   outline: 4px solid rgba(185, 185, 185, 0.3);
+  box-shadow: none;
 }
 
 /* Спинер */
@@ -339,19 +355,23 @@ img {
 
 .button-slider-arrow:hover .icon-arrow{
   color: #2D3440;
+  transition: all ease-out 100ms;
 }
 
 .button-slider-arrow:hover {
   background-color: #FCFCFC;
+  transition: all ease-out 100ms;
 }
 
 .button-slider-arrow:active {
   background-color: rgba(252, 252, 252, 0.5);
+  transition: all ease-out 100ms;
 }
 
 .button-slider-arrow:focus-visible {
   background: rgba(252, 252, 252, 0.3);
   outline: 2px solid #2D3440;
+  transition: all ease-out 100ms;
 }
 
 .button-slider-arrow:disabled {
@@ -390,11 +410,13 @@ img {
 .button-slider-pagination:active:not(.button-slider-pagination--current) {
   opacity: 0.5;
   border: none;
+  transition: all ease-out 300ms;
 }
 
 .button-slider-pagination:focus-visible:not(.button-slider-pagination--current) {
   border: 1px solid #2D3440;
   outline: none;
+  transition: all ease-out 100ms;
 }
 
 /* Кнопка социальных сетей */
@@ -431,10 +453,12 @@ img {
 }
 .socials-link:hover > .icon:after {
   background-color: #2D3440;
+  transition: all ease-out 100ms;
 }
 /* active */
 .socials-link:active {
   opacity: 0.5;
+  transition: all ease-out 100ms;
 }
 
 /* focus */
@@ -482,6 +506,7 @@ img {
 .button-cart:active {
   background-color: #FFCBD8;
   border: 2px solid #FF2F64;
+  transition: all 100ms ease-out;
 }
 
 .button-cart:focus-visible {
@@ -518,11 +543,13 @@ img {
 .button-filter-apply:hover:not(:active):not(:disabled) {
   background: #FCFCFC;
   outline: 2px solid rgba(252, 252, 252, 0.3);
+  transition: all 100ms ease-out;
 }
 
 .button-filter-apply:active {
   background: rgba(252, 252, 252, 0.5);
   outline: none;
+  transition: all 100ms ease-out;
 }
 
 .button-filter-apply:focus-visible {
@@ -537,7 +564,7 @@ img {
 /* Основная кнопка пагинации каталога*/
 .pagination-link--prev,
 .pagination-link--next {
-  background: url("../images/icons/arrow-right.svg") no-repeat center;
+  background: url("../images/icons/arrow-right.svg") no-repeat left 8px center;
 }
 .pagination-link--prev {
   transform: rotate(180deg);
@@ -1437,7 +1464,7 @@ img {
 
 .page-footer {
   display: flex;
-  margin-top: 48px;
+  margin-top: 45px;
   margin-bottom: 48px;
   /* Sticky footer */
   flex-grow: 0;
@@ -1450,6 +1477,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding-left: 4px;
+  padding-top: 3px;
 }
 
 .footer-socials-item {
@@ -1532,7 +1560,8 @@ img {
 
 .htmlacademy-logo-link {
   display: block;
-  margin-bottom: 15px;
+  margin-top: 3px;;
+  margin-bottom: 13px;
   height: 27px;
 }
 
@@ -1675,6 +1704,7 @@ img {
   grid-area: button;
   display: block;
   margin: auto;
+  margin-left: 98px;
 }
 
 .products-pagination-list {
