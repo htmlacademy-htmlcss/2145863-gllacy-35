@@ -43,21 +43,21 @@ buttonCatalog.addEventListener('click', function() {
 });
 
 // Закрытие модального окна обратной связи
-buttonCloseFeedback.addEventListener('click', function() {
+buttonCloseFeedback?.addEventListener('click', function() {
   modalContaniner.classList.toggle('active');
 });
 
-buttonOpenFeedback.addEventListener('click', function() {
+buttonOpenFeedback?.addEventListener('click', function() {
   modalContaniner.classList.toggle('active');
 });
 
-buttonSliderNext.addEventListener('click', function() {
+buttonSliderNext?.addEventListener('click', function() {
   currrentSlide++;
   currrentSlide = (currrentSlide > 3) ? 1 : currrentSlide;
   setSlide(currrentSlide);
 });
 
-buttonSliderPrev.addEventListener('click', function() {
+buttonSliderPrev?.addEventListener('click', function() {
   currrentSlide--;
   currrentSlide = (currrentSlide < 1) ? 3 : currrentSlide;
   setSlide(currrentSlide);
