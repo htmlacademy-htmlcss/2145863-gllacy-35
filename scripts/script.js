@@ -11,9 +11,9 @@ let itemCatalog = document.querySelector('.item--catalog');
 let buttonCatalog = document.querySelector('.item--catalog a');
 
 
-let buttonOpenFeedback = document.querySelector('.button--open-feedback');       // Контейнер модального окна
-let modalContaniner = document.querySelector('.modal-container');             // Контейнер модального окна
-let buttonCloseFeedback = document.querySelector('.modal-close-button');      // Кнопка закрытия модального окна обратной связи
+let buttonOpenFeedback = document.querySelector('.button--open-feedback');
+let modalContaniner = document.querySelector('.modal-container');
+let buttonCloseFeedback = document.querySelector('.modal-close-button');
 
 let buttonSliderNext = document.querySelector('.button-slider--next');
 let buttonSliderPrev = document.querySelector('.button-slider--prev');
@@ -21,9 +21,7 @@ let body = document.querySelector('body');
 
 let currrentSlide = 1;
 
-// console.log(buttonCloseFeedback);
-// console.log(modalContaniner);
-
+// Переключение менюшек
 buttonCart.addEventListener('click', function() {
   itemCart.classList.toggle('active');
     if (itemCart.classList.contains('active')) {
@@ -57,14 +55,12 @@ buttonSliderNext.addEventListener('click', function() {
   currrentSlide++;
   currrentSlide = (currrentSlide > 3) ? 1 : currrentSlide;
   setSlide(currrentSlide);
-  // console.log(currrentSlide);
 });
 
 buttonSliderPrev.addEventListener('click', function() {
   currrentSlide--;
   currrentSlide = (currrentSlide < 1) ? 3 : currrentSlide;
   setSlide(currrentSlide);
-  // console.log(currrentSlide);
 });
 
 function setSlide(slideNumber) {

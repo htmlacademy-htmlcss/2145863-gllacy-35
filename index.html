@@ -390,7 +390,14 @@
             <p class="delivery-form-text">Укажите адрес и дату доставки, и мы свяжемся<br> с вами, чтобы подтвердить заказ.</p>
             <div class="container-delivery-form">
               <p class="field-group delivery-form-date">
-                <label class="form-label" for="delivery-date">Дата</label>
+                <!-- Лебл с тултипом -->
+                <span class="form-label-icon">
+                  <label class="form-label" for="delivery-date">Дата</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите предварительную дату доставки для дальнейшего уточнения.</span>
+                  </span>
+                </span>
                 <input class="form-input" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020" required>
               </p>
               <p class="field-group delivery-form-phone">
@@ -398,7 +405,14 @@
                 <input class="form-input" type="text" name="delivery-phone" id="delivery-phone" placeholder="+7 800 999-00-00" required>
               </p>
               <p class="field-group delivery-form-address">
-                <label class="form-label" for="delivery-address">Адрес</label>
+                <!-- Лебл с тултипом -->
+                <span class="form-label-icon">
+                  <label class="form-label" for="delivery-address">Адрес</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-address"></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-address">Укажите улицу, дом и квартиру для доставки.</span>
+                  </span>
+                </span>
                 <input class="form-input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
               </p>
               <p class="field-group delivery-form-button">
@@ -480,12 +494,13 @@
           <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
             <input class="form-input" type="text" name="name" placeholder="Имя и фамилия" aria-label="Имя фамииля" required>
             <input class="form-input" type="text" name="email" placeholder="email@example.com" aria-label="Электронная почта" required>
-            <textarea class="form-input feedback-form-text" name="feedback-text" id="" placeholder="В свободной форме" aria-label="Текст сообщения" required></textarea>
+            <textarea class="form-input feedback-form-text" name="feedback-text" placeholder="В свободной форме" aria-label="Текст сообщения" required></textarea>
             <button class="button-common button-common--extra button--send-feedback" type="submit">Отправить</button>
           </form>
         </section>
       </div>
     </div>
+    <!-- скрипт для тестирования скрытых элементов -->
+    <script src="scripts/script.js"></script>
   </body>
-  <script src="js/script.js"></script>
 </html>
