@@ -1005,6 +1005,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   height: 100%;
+  row-gap: 10px;
 }
 
 .navigation-controls-item {
@@ -1534,6 +1535,7 @@ img {
   flex-wrap: wrap;
   padding-left: 4px;
   padding-top: 3px;
+  row-gap: 10px;
 }
 
 .footer-socials-item {
@@ -1626,6 +1628,7 @@ img {
 /* Хлебные крошки */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
