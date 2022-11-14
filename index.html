@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="images/icons/favicon.png"> <!-- 32×32 -->
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -94,10 +94,12 @@
               <div class="popover popover-login">
                 <h2 class="login-title">Личный кабинет</h2>
                 <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <input class="form-input login-field" type="text" name="email" placeholder="email@example.com"
-                    aria-label="Имя пользователя" required>
-                  <input class="form-input login-field" type="password" name="password"
-                    placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" aria-label="Пароль" required>
+                  <label class="visually-hidden" for="login-form-email">Адрес электронной почты</label>
+                  <input class="form-input login-field" type="email" id="login-form-email" name="email" placeholder="email@example.com"
+                    required>
+                  <label class="visually-hidden" for="login-form-password">Пароль</label>
+                  <input class="form-input login-field" type="password" id="login-form-password" name="password"
+                    placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" required>
                   <div class="login-footer">
                     <button class="button-common button-common--extra button--login" type="submit">Войти</button>
                     <div class="wrapper-login-links">
@@ -419,7 +421,8 @@
                 вкусного,
                 что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form name="subscribe" action="https://echo.htmlacademy.ru" method="post">
-                <input class="form-input" type="email" name="subscribe-email" placeholder="email@example.com" required>
+                <label class="visually-hidden" for="subscribe-email">Электронная почта</label>
+                <input class="form-input" type="email" id="subscribe-email" name="subscribe-email" placeholder="email@example.com" required>
                 <button class="button-common button-common--extra" type="submit">Отправить</button>
               </form>
             </div>
@@ -547,12 +550,13 @@
         <section class="modal-content">
           <h2 class="modal-title">Мы обязательно ответим вам!</h2>
           <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="form-input" type="text" name="name" placeholder="Имя и фамилия" aria-label="Имя фамииля"
-              required>
-            <input class="form-input" type="text" name="email" placeholder="email@example.com"
-              aria-label="Электронная почта" required>
-            <textarea class="form-input feedback-form-text" name="feedback-text" placeholder="В свободной форме"
-              aria-label="Текст сообщения" required></textarea>
+            <label class="visually-hidden" for="feedback-form-name">Имя и фамиилия</label>
+            <input class="form-input" type="text" id="feedback-form-name" name="name" placeholder="Имя и фамилия" required>
+            <label class="visually-hidden" for="feedback-form-email">Электронная почта</label>
+            <input class="form-input" type="text" id="feedback-form-email" name="email" placeholder="email@example.com" required>
+            <label class="visually-hidden" for="feedback-form-text">Электронная почта</label>
+            <textarea class="form-input feedback-form-text" id="feedback-form-text" name="feedback-text"
+              placeholder="В свободной форме" required></textarea>
             <button class="button-common button-common--extra button--send-feedback" type="submit">Отправить</button>
           </form>
         </section>
