@@ -958,7 +958,10 @@ img {
 .page-header {
   line-height: 20px;
   display: flex;
+  box-sizing: border-box;
   min-height: 104px;
+  padding: 24px 0;
+
   /* Sticky footer */
   flex-grow: 0;
   flex-shrink: 0;
@@ -997,6 +1000,7 @@ img {
 
 .navigation-controls-list {
   display: flex;
+  min-width: 282px;
   justify-content: flex-end;
   flex-wrap: wrap;
   align-items: center;
@@ -1175,6 +1179,8 @@ img {
 }
 
 .promo-item {
+  display: flex;
+  flex-direction: column;
   background-color: #FF7799;
   box-sizing: border-box;
   padding: 36px;
@@ -1183,6 +1189,12 @@ img {
   border-radius: 16px;
   background-repeat: no-repeat;
   background-position: right bottom;
+}
+
+.promo-get-present {
+  margin-top: auto;
+  align-self: flex-start;
+  max-width: 328px;
 }
 
 .bg-raspberry {
