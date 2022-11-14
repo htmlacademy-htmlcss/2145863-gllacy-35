@@ -178,7 +178,7 @@ img {
 .button-text-icon:focus-visible {
   background-color: rgba(252, 252, 252, 0.5);
   outline: 2px solid #000000;
-  outline-offset: -2px;
+  outline-offset: -1px;
 }
 
 .button-text:active,
@@ -526,6 +526,7 @@ img {
 
 .button-cart:focus-visible {
   border: 2px solid #242424;
+  outline: none;
 }
 
 .button-cart:disabled{
