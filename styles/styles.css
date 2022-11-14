@@ -652,16 +652,17 @@ img {
   outline-offset: -2px;
 }
 
-.form-input:focus.err {
+.form-input:focus.error {
   outline: 2px solid #2D3440;
   outline-offset: 0;
   border: 2px solid #EA5454;
 }
-.form-input.err {
+
+.form-input.error {
   border-color: #EA5454;
 }
 
-.form-input:hover.err {
+.form-input:hover.error {
   outline: 2px solid #EA5454;
   outline-offset: -2px;
 }
@@ -1888,6 +1889,7 @@ img {
 }
 
 .cart-item-price {
+  font-weight: 700;
   grid-area: price;
   align-self: center;
 }
@@ -1922,7 +1924,6 @@ img {
     0 0 0 5px #FCFCFC,
     0 0 15px 0 #B9B9B9;
 }
-
 .cart--delete:focus-visible {
   outline-offset: 5px;
 }
@@ -1930,8 +1931,8 @@ img {
 .cart--delete:active {
   transform: scale(0.85);
   box-shadow:
-    0 0 0 5px #FCFCFC,
-    0 0 15px 0 #B9B9B9;
+  0 0 0 5px #FCFCFC,
+  0 0 15px 0 #B9B9B9;
 }
 
 /* Поповер авторизации */
