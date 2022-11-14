@@ -885,9 +885,7 @@ img {
 
 .range-control {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  bottom: -7px;
   padding: 0;
   box-sizing: border-box;
   width: 16px;
