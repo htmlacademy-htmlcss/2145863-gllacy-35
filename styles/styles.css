@@ -444,7 +444,8 @@ img {
 }
 
 /* Кнопка социальных сетей */
-.icon {
+
+.socials-link {
   display: block;
   position: relative;
   width: 24px;
@@ -453,10 +454,7 @@ img {
   outline: 2px solid rgba(252, 252, 252, 0.3);
 }
 
-/* псевдоэлемент реализует темную подложку      */
-/* т.к. при простом закрашивании фона появляютя */
-/* темные артефакты по краям круга иконки       */
-.icon::after {
+.socials-link::after {
   content: "";
   position: absolute;
   width: 22px;
@@ -470,42 +468,43 @@ img {
   z-index: -1;
 }
 
-.socials-link:hover > .icon {
+/* hover */
+.socials-link:hover {
   outline: 2px solid rgba(252, 252, 252, 0.5);
 }
 
-.socials-link:hover > .icon::after {
+.socials-link:hover::after {
   background-color: #2d3440;
   transition: all ease-out 100ms;
 }
 
-.socials-link:active {
+/* active */
+.socials-item:active {
   opacity: 0.5;
   transition: all ease-out 100ms;
 }
 
-.socials-link:focus {
-  outline: none;
+/* focus-visible */
+.socials-link:focus-visible {
+  outline: 2px solid #2D3440;
+  outline-offset: 0;
 }
 
-.socials-link:focus-visible > .icon {
-  outline: 2px solid #2d3440;
-}
-
-.socials-link:focus-visible > .icon::after {
-  background-color: #2d3440;
+.socials-link:focus-visible::after {
+  background-color: #2D3440;
 }
 
 /* иконки соцсетей */
-.icon-telegram > .icon {
-  background: url("../images/icons/telegram.svg") no-repeat center;
+
+.icon-telegram {
+  background: url("../images/icons/telegram.svg");
 }
 
-.icon-vk > .icon {
+.icon-vk {
   background: url("../images/icons/vk.svg");
 }
 
-.icon-youtube > .icon {
+.icon-youtube {
   background: url("../images/icons/youtube.svg");
 }
 
@@ -513,6 +512,7 @@ img {
 .button-cart {
   background: url("../images/icons/cart-white.svg") no-repeat center;
   background-color: #ff2f64;
+  box-sizing: border-box;
   flex-shrink: 0;
   width: 32px;
   height: 32px;
