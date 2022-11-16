@@ -136,9 +136,9 @@
                       <h3 class="cart-item-title"><a href="#" aria-label="Малинка 1 кг х 310 ₽.">Малинка</a></h3>
                       <p class="cart-item-desc">1 кг х 310 ₽</p>
                       <b class="cart-item-price">310 ₽</b>
-                      <button class="cart--delete" type="button">
+                      <a class="cart--delete" href="#">
                         <span class="visually-hidden">Удалить товар из корзины</span>
-                      </button>
+                      </a>
                     </li>
                     <li class="cart-item">
                       <a class="cart-item-link" href="#" tabindex="-1">
@@ -148,9 +148,9 @@
                       <h3 class="cart-item-title"><a href="№" aria-label="Бабл-гам 1,5 кг х 320 ₽.">Бабл-гам</a></h3>
                       <p class="cart-item-desc">1,5 кг х 320 ₽</p>
                       <b class="cart-item-price">480 ₽</b>
-                      <button class="cart--delete" type="button">
+                      <a class="cart--delete" href="#">
                         <span class="visually-hidden">Удалить товар из корзины</span>
-                      </button>
+                      </a>
                     </li>
                   </ul>
                   <div class="cart-footer">
@@ -273,24 +273,18 @@
               </li>
             </ol>
             <ul class="slider-socials">
-              <li class="slider-socials-item">
-                <a class="socials-link icon-telegram" href="#" target="_blank">
-                  <!-- .icon введен для управления прозрачностью всего элемента в состоянии :active -->
-                  <!-- в противном случае просвечивает темную подложку                              -->
-                  <!-- socials-link:has(:active) не работает в firefox                              -->
-                  <span class="icon" aria-hidden="true"></span>
+              <li class="socials-item">
+                <a class="socials-link icon-telegram" href="https://t.me/htmlacademy" target="_blank">
                   <span class="visually-hidden">Telegram</span>
                 </a>
               </li>
-              <li class="slider-socials-item">
-                <a class="socials-link icon-vk" href="#" target="_blank">
-                  <span class="icon" aria-hidden="true"></span>
+              <li class="socials-item">
+                <a class="socials-link icon-vk" href="https://vk.com/htmlacademy" target="_blank">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
-              <li class="slider-socials-item">
-                <a class="socials-link icon-youtube" href="#" target="_blank">
-                  <span class="icon" aria-hidden="true"></span>
+              <li class="socials-item">
+                <a class="socials-link icon-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
                   <span class="visually-hidden">Youtube</span>
                 </a>
               </li>
@@ -321,7 +315,6 @@
         <section class="popular">
           <h2 class="popular-title title-2">Попробуйте самые популярные вкусы нашего мороженого</h2>
           <ul class="popular-list">
-
             <li class="product">
               <a class="product-link" href="#">
                 <img class="product-image" src="images/catalog/product-01.jpg" width="168" height="168" alt="">
@@ -330,9 +323,9 @@
               </a>
               <div class="wrapper-product-bottom">
                 <b class="product-price">310 ₽/кг</b>
-                <button class="button-cart" type="button">
+                <a class="button-cart" type="button" href="#">
                   <span class="visually-hidden">Добавить в корзину</span>
-                </button>
+                </a>
               </div>
             </li>
             <li class="product">
@@ -343,9 +336,9 @@
               </a>
               <div class="wrapper-product-bottom">
                 <b class="product-price">340 ₽/кг</b>
-                <button class="button-cart" type="button">
+                <a class="button-cart" type="button">
                   <span class="visually-hidden">Добавить в корзину</span>
-                </button>
+                </a>
               </div>
             </li>
             <li class="product">
@@ -356,13 +349,12 @@
               </a>
               <div class="wrapper-product-bottom">
                 <b class="product-price">330 ₽/кг</b>
-                <button class="button-cart" type="button">
+                <a class="button-cart" type="button">
                   <span class="visually-hidden">Добавить в корзину</span>
-                </button>
+                </a>
               </div>
             </li>
             <li class="product">
-
               <a class="product-link" href="#">
                 <img class="product-image" src="images/catalog/product-04.jpg" width="168" height="168" alt="">
                 <h3 class="product-name">Бабл-гам</h3>
@@ -370,9 +362,9 @@
               </a>
               <div class="wrapper-product-bottom">
                 <b class="product-price">320 ₽/кг</b>
-                <button class="button-cart" type="button">
+                <a class="button-cart" type="button">
                   <span class="visually-hidden">Добавить в корзину</span>
-                </button>
+                </a>
               </div>
             </li>
           </ul>
@@ -497,21 +489,18 @@
       <!-- Подвал страницы -->
       <footer class="page-footer">
         <ul class="footer-socials-list">
-          <li class="footer-socials-item">
+          <li class="socials-item footer-socials-item">
             <a class="socials-link icon-telegram" href="https://t.me/htmlacademy" target="_blank">
-              <span class="icon" aria-hidden="true"></span>
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
-          <li class="footer-socials-item">
+          <li class="socials-item footer-socials-item">
             <a class="socials-link icon-vk" href="https://vk.com/htmlacademy" target="_blank">
-              <span class="icon" aria-hidden="true"></span>
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
-          <li class="footer-socials-item">
+          <li class="socials-item footer-socials-item">
             <a class="socials-link icon-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-              <span class="icon" aria-hidden="true"></span>
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
